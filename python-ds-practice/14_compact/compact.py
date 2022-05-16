@@ -4,3 +4,10 @@ def compact(lst):
         >>> compact([0, 1, 2, '', [], False, (), None, 'All done'])
         [1, 2, 'All done']
     """
+    for item in lst:
+        # print(item)
+        print(bool(item), item)
+        # if bool(item) == False:
+        #     lst.remove(item)
+
+    return lst 
