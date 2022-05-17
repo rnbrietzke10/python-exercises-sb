@@ -21,3 +21,14 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    i = 0
+    j = 1
+    while i < len(nums):
+        while j < len(nums):
+            total = nums[i] + nums[j]
+            if total == goal:
+                return (nums[i], nums[j])
+            else:
+                j += 1
+        i += 1
+    return tuple()
