@@ -1,10 +1,6 @@
 """Python serial number generator."""
 
 
-
-from tracemalloc import start
-
-
 class SerialGenerator:
     """Machine to create unique incrementing serial numbers.
     
@@ -33,7 +29,8 @@ class SerialGenerator:
          """
         self.start = start
         self.serial_num  = start -1
-    
+    def __repr__(self):
+        return f'SerialGenerator start={self.start} next={self.serial_num+2} '
     def generate(self):
         """
         Sets new serial number when generate is called.
